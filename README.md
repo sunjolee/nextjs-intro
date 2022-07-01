@@ -121,3 +121,23 @@ https://nomadcoders.co/nextjs-fundamentals/lectures/3436
     ```
     https://nextjs.org/docs/api-reference/next/router#userouter
 
+# 1.4 CSS Modules
+
+![img_11.png](img_11.png)
+
+![img_12.png](img_12.png)
+
+![img_14.png](img_14.png)
+ 
+![img_15.png](img_15.png)
+    
+    Array.prototype.join()
+    join() 메서드는 배열의 모든 요소를 연결해 하나의 문자열로 만듭니다.
+    const elements = ['Fire', 'Air', 'Water'];
+    console.log(elements.join()); // expected output: "Fire,Air,Water"
+    console.log(elements.join('-')); // expected output: "Fire-Air-Water"
+    https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+    
+    CSS Module 사용하기
+    1. className={`${styles.link} ${router.pathname === "/" ? styles.active : ""}`}
+    2. [styles.link, router.pathname === "/" ? styles.active : ""].join(" ")
