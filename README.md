@@ -253,7 +253,40 @@ https://nomadcoders.co/nextjs-fundamentals/lectures/3436
 ![img_34.png](img_34.png)
 ![img_35.png](img_35.png)
 
+* API 호출
+
+    ![img_36.png](img_36.png)
+
 #2.2 Redirect and Rewrite (13:31)
+
+## Redirect
+
+* localhost:3000/contact 로 접속하면 form으로 리다이렉트 처리
+  ( next.config.js 수정 후 재시작해야 함 npm run dev )
+
+![img_37.png](img_37.png)
+
+
+![img_38.png](img_38.png)
+
+* localhost:3000/old-blog/1515 로 접속하면  http://localhost:3000/new-sexy-blog/1515 리다이렉트 처리
+![img_39.png](img_39.png)
+  
+![img_40.png](img_40.png)
+  
+    redirects = source의 URL을 destination으로 바꿔서 연결해줌
+    rewrites = 실제 URL은 destination 이지만 source라고 구라침
+
+
+## Rewrite
+![img_41.png](img_41.png)
+
+![img_44.png](img_44.png)
+
+![img_42.png](img_42.png)
+
+![img_43.png](img_43.png)
+
 
 #2.3 Server Side Rendering (11:24)
 
