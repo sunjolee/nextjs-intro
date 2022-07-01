@@ -3,6 +3,8 @@
 ## 강의
 https://nomadcoders.co/nextjs-fundamentals/lectures/3436
 
+위 강의와 댓글을 참고하였습니다.
+
 ---
 ## 0 Introduction
 
@@ -141,3 +143,35 @@ https://nomadcoders.co/nextjs-fundamentals/lectures/3436
     CSS Module 사용하기
     1. className={`${styles.link} ${router.pathname === "/" ? styles.active : ""}`}
     2. [styles.link, router.pathname === "/" ? styles.active : ""].join(" ")
+
+# 1.5 Styles JSX
+
+![img_16.png](img_16.png)
+
+![img_17.png](img_17.png)
+
+![img_18.png](img_18.png)
+    
+    Built-In CSS Support (내장 CSS 지원)
+    
+    Next.js를 사용하면 JavaScript 파일에서 CSS 파일을 가져올 수 있습니다.
+    이것은 Next.js가 import 개념을 JavaScript 이상으로 확장하기 때문에 가능합니다.
+    
+    CSS-in-JS
+    격리된 범위 CSS에 대한 지원을 제공하기 위해 styled-jsx를 번들로 제공합니다. 목표는 불행히도 서버 렌더링을 지원하지 않고 JS 전용인 Web Components와 유사한 "Shadow CSS"를 지원하는 것입니다.
+    https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js
+    
+    styled-jsx를 사용하는 컴포넌트는 다음과 같습니다.
+    ```
+    < style jsx>{`
+    CSS 스타일..
+    `}< /style>
+    ```
+    styled-jsx
+    https://github.com/vercel/styled-jsx
+    
+    Adding Component-Level CSS
+    Next.js는[name].module.css 파일 명명 규칙을 사용하여 CSS Module을 지원합니다.
+    
+    Sass Support
+    Next.js를 사용하면.scss 및.sass 확장자를 모두 사용하여 Sass를 가져올 수 있습니다.
