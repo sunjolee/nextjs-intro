@@ -1,8 +1,10 @@
+import Seo from "../components/Seo";
 
 export default function Potato() {
     return (
         <div>
-            <h1>About</h1>
+            <Seo title="About" />
+            <h1>About : 나는 about.js</h1>
         </div>
     );
 }

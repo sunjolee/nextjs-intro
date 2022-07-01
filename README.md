@@ -226,3 +226,40 @@ https://nomadcoders.co/nextjs-fundamentals/lectures/3436
     
     + 파일명.module.css 파일 형태를 제외한 모든 나머지 css파일들은 _app.js에서만 import해와서 사용해야 한다. (글로벌 css간의 충돌을 피하기 위해서이다.)
       https://nextjs.org/docs/messages/css-global
+
+---
+
+# 2 Practice Project
+
+# 2.0 Patterns
+
+![img_25.png](img_25.png)
+![img_27.png](img_27.png)
+
+![img_28.png](img_28.png)
+
+![img_29.png](img_29.png)
+
+![img_30.png](img_30.png)
+
+![img_31.png](img_31.png)
+
+![img_32.png](img_32.png)
+
+![img_33.png](img_33.png)
+
+# 2.1 Fetching Data
+
+#2.2 Redirect and Rewrite (13:31)
+
+#2.3 Server Side Rendering (11:24)
+
+#2.4 Recap (05:16)
+
+#2.5 Dynamic Routes (07:02)
+
+#2.6 Movie Detail (13:32)
+
+#2.7 Catch All (10:21)
+
+#2.8 404 Pages (02:06)
