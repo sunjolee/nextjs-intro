@@ -250,6 +250,9 @@ https://nomadcoders.co/nextjs-fundamentals/lectures/3436
 
 # 2.1 Fetching Data
 
+![img_34.png](img_34.png)
+![img_35.png](img_35.png)
+
 #2.2 Redirect and Rewrite (13:31)
 
 #2.3 Server Side Rendering (11:24)
