@@ -450,3 +450,19 @@ https://nomadcoders.co/nextjs-fundamentals/lectures/3436
     https://ayaan.oopy.io/ssr-vs-csr를 참고하시면 좋을 것 같습니다 :)
 
 #2.8 404 Pages (02:06)
+
+![img_58.png](img_58.png)
+
+## 404.js 페이지만 추가 해 주면 끝!!
+
+![img_59.png](img_59.png)
+    
+    404 Page
+    
+    방문할 때마다 서버 렌더링 오류 페이지가 발생하면 Next.js 서버의 로드가 증가합니다. 이로 인해 비용이 증가하고 경험이 느려질 수 있습니다. 위의 문제를 피하기 위해, Next.js는 추가 파일을 추가할 필요 없이 기본적으로 정적 404 페이지를 제공합니다. 이 파일은 빌드 시 정적으로 생성됩니다.
+    빌드 시 데이터를 가져와야 하는 경우 이 페이지 내에서 getStaticProps를 사용할 수 있습니다.
+    
+    https://nextjs.org/docs/advanced-features/custom-error-page#404-page
+
+
+# 감사합니다.
