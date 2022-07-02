@@ -371,6 +371,37 @@ https://nomadcoders.co/nextjs-fundamentals/lectures/3436
 
 #2.6 Movie Detail (13:32)
 
+![img_50.png](img_50.png)
+
+![img_53.png](img_53.png)
+
+![img_51.png](img_51.png)
+
+![img_52.png](img_52.png)
+
+### API 호출 ( http://localhost:3000/api/movies/453395)
+![img_54.png](img_54.png)
+
+    
+    router.push(url, as, options)
+    
+    클라이언트 측 전환을 처리합니다. 이 방법은 next/link가 충분하지 않은 경우에 유용합니다.
+    url: UrlObject | String: 탐색할 URL
+    as: UrlObject | String: 브라우저 URL 표시줄에 표시될 경로에 대한 선택적 데코레이터입니다.
+    ```
+    router.push({
+    pathname: '/post/[pid]',
+    query: { pid: post.id },
+    })
+    ```
+    + 외부 URL에 대해서는 router.push()를 사용할 필요가 없습니다.
+      window.location을 사용하는 것이 더 적합합니다.
+      https://nextjs.org/docs/api-reference/next/router#routerpush
+    
+    Movie Detail API
+    API: https://api.themoviedb.org/3/movie/{movie_id}?api_key=api_key&language=en-US
+    https://developers.themoviedb.org/3/movies/get-movie-details
+
 #2.7 Catch All (10:21)
 
 #2.8 404 Pages (02:06)
