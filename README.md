@@ -404,4 +404,49 @@ https://nomadcoders.co/nextjs-fundamentals/lectures/3436
 
 #2.7 Catch All (10:21)
 
+![img_55.png](img_55.png)
+
+![img_56.png](img_56.png)
+
+![img_57.png](img_57.png)
+
+    
+    getServerSideProps
+    페이지에서 getServerSideProps(서버 측 렌더링)라는 함수를 export하는 경우 Next.js는 getServerSideProps에서 반환된 데이터를 사용하여 각 request에서 이 페이지를 pre-render합니다.
+    https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props
+    
+    getServerSideProps (Context parameter)
+    params: 이 페이지에서 dynamic route(동적 경로)를 사용하는 경우 params에 route parameter가 포함됩니다. 페이지 이름이 [id].js이면 params는 { id: ... }처럼 보일 것입니다.
+    query: 쿼리 문자열을 나타내는 객체입니다.
+    https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter
+    
+    getServerSideProps (타입스크립트와 함께 사용하기)
+    ```
+    import { GetServerSideProps } from 'next'
+    
+    export const getServerSideProps: GetServerSideProps = async (context) => {
+    // ...
+    }
+    
+    function Page({ data }: InferGetServerSidePropsType< typeof getServerSideProps>)
+    ```
+    https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#getserversideprops-with-typescript
+    
+    router.query.params 타입 지정 (타입스크립트)
+    ```
+    type MovieDetailParams = [string, string] | [];
+    
+    const router: NextRouter = useRouter();
+    const [title, id] = (router.query.params || []) as MovieDetailParams;
+  
+  ---
+  
+
+    혹시나 저처럼 왜 || [] 를 추가해주면 되는건지 궁금하신분들을 위해 남겨봅니다.
+    기본적으로 미리 렌더링이 되기때문에 먼저 html 파일이 내려온다는건 다들 아실겁니다. 이때 문제가 아직 js들이 다운로드가 안됐기 때문에 useRouter()로 정보를 제대로 가져오질 못하는 상태입니다. 그렇기 때문에 초기에는 빈 배열을 추가해줘서 오류가 발생하지 않도록 해주고, js가 내려가서 다시 렌더링하게되면 그 때는 빈 배열이 아닌 router.query.params에서 값을 가져와서 뿌려주는거죠.
+    정확하게 보고싶으신 분들은 검사 -> 네트워크 -> slow 3g 로 설정하신 후에 페이지 렌더링 확인하시면 먼저 html쪽 뜨고나서 js까지 모두 다운로드 된 후에야 title이 보이는걸 볼 수 있으실거예요.
+    추가로 위와 같은 이유로 console.log(router)를 찍으면 2번 보이는겁니다.
+    SSR 방식이기 때문인데
+    https://ayaan.oopy.io/ssr-vs-csr를 참고하시면 좋을 것 같습니다 :)
+
 #2.8 404 Pages (02:06)
